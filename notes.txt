@@ -1,0 +1,8 @@
+emmet
+CDN links
+Cross Origin
+asyn vs differ
+rel=“stylesheet”
+Why we inject css file in head?
+
+q&ans: If we have duplicate id’s Root will be replaced all ids.
