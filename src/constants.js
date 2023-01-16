@@ -1,31 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+export const IMG_CDN_URL = 'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/';
 
-const paragrah = <p>dumy text</p>
-
-const Title = () => {
-    return <a href="#">
-            <img  className="logo" alt="logo" 
-            src="https://yt3.ggpht.com/ytc/AMLnZu_EC-ECXAxRAixWGEfMsE1rdSoetBHyxmLNdtCB=s900-c-k-c0x00ffffff-no-rj" />
-        </a>
-}
-
-const Header = () => (
-    <div className="header">
-        {<Title />}
-        <div className="nav-item">
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
-                <li>Cart</li>
-            </ul>
-        </div>
-    </div>
-);
-const styling = {color: "red"}
-
-const restaurantList = [
+export const restaurantList = [
     {
                 "type": "restaurant",
                 "data": {
@@ -1987,45 +1962,3 @@ const restaurantList = [
     }
 ]
 
-const ResturentCard = ({cloudinaryImageId, name, cuisines, lastMileTravelString}) => {
-    return (
-        <div className="card">
-            <img src={"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+cloudinaryImageId } />
-            <h2>{ name }</h2>
-            <p>{ cuisines.join(',') }</p>
-            <h4>{ lastMileTravelString } minutes</h4>
-        </div>
-    );
-};
-
-const Body = () => {
-    return (
-        <div className="restaurant-list">
-            {
-                restaurantList.map((restaurant) => {
-                    return <ResturentCard {...restaurant.data} key={restaurant.data.id} />
-                })
-            }
-        </div>
-    )
-}
-
-const Footer = () => {
-    return (
-        "Footer"
-    )
-}
-
-const AppLayout = () => {
-    return (
-        <>
-        <Header></Header>
-        <Body></Body>
-        <Footer></Footer>
-        </>
-    )
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);
